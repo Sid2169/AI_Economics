@@ -8,15 +8,15 @@ Source check: **2026-09-20**.
 * Published standard Business Codex message estimates match Plus. The documentation also lists **Business ($100)** with Pro 5× estimates; the calculation below concerns standard seats.
 * Additional workspace credits cost extra. [Pricing and usage](https://learn.chatgpt.com/docs/pricing).
 
-## Representative usage
+## Assumed workload
 
 GPT-5.6 Sol: **$7.50/block**, using the [sample token mix with cache creation](../methodology.md). [API rates](https://developers.openai.com/api/docs/models/gpt-5.6-sol).
 
-## Monthly estimate — conditional
+## Monthly calculation
 
 Assume **26–30 blocks/month per active seat**, as in the sample:
 
-**26–30 × $7.50 = $195–$225/seat/month**, central **$210**.
+**26–30 × $7.50 = $195–$225/seat/month**, at 28 blocks **$210**.
 
 | Billing basis | Subscription | API equivalent / price |
 | --- | ---: | ---: |
@@ -27,8 +27,8 @@ Assume **26–30 blocks/month per active seat**, as in the sample:
 
 Minimum annual commitment: **2 × $240 = $480 upfront**.
 
-## Key findings
+## Additional calculations and limits
 
 * Break-even per monthly seat: **$25 / $7.50 = 3.33 blocks/month**.
 * Minimum monthly purchase with one active user: **$50 / $7.50 = 6.67 blocks/month**.
-* Equal published message ranges do not establish equal monthly token budgets. Administration and workspace benefits are unpriced here.
+* Monthly token budgets are unavailable in the cited sources. Administration and workspace benefits are excluded from the calculation.

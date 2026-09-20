@@ -7,7 +7,7 @@ Source check: **2026-09-20**.
 * SuperGrok: **$30/month**; SuperGrok Plus: **$100/month**. Grok 4.6 is listed; Plus offers higher usage. [Pricing](https://x.ai/pricing).
 * Paid usage draws from a shared weekly pool across products. Its token quantity and the Plus-to-SuperGrok multiplier are not published in the cited documentation. [Usage FAQ](https://docs.x.ai/grok/faq).
 
-## Representative usage
+## Assumed workload
 
 Grok 4.6, standard short-context API rates. [Model pricing](https://docs.x.ai/developers/models/grok-4.6).
 
@@ -18,22 +18,22 @@ Grok 4.6, standard short-context API rates. [Model pricing](https://docs.x.ai/de
 | 0.15M output/reasoning × $6/M | $0.90 |
 | **3.95M total** | **$4.00** |
 
-## Monthly estimate — fixed demand
+## Monthly calculation — fixed usage
 
-Assume **26–30 blocks/month** on either plan; no unverified tier multiplier:
+Calculation input: **26–30 blocks/month** on each plan:
 
-**26–30 × $4 = $104–$120/month**, central **$112**.
+**26–30 × $4 = $104–$120/month**, at 28 blocks **$112**.
 
-| Plan | Value / price | Break-even blocks/month |
+| Plan | API equivalent / price | Break-even blocks/month |
 | --- | ---: | ---: |
 | SuperGrok | **3.47–4.00×** | **7.50** |
 | SuperGrok Plus | **1.04–1.20×** | **25.00** |
 
-Central INR illustration: **₹10,080**, versus converted prices **₹2,700 / ₹9,000**.
+INR calculation at 28 blocks: **₹10,080**, versus converted prices **₹2,700 / ₹9,000**.
 
-## Key findings
+## Additional calculations and limits
 
-* These are demand scenarios; neither plan's included capacity is established in tokens.
-* Plus costs **3.33×** as much. It needs more than **3.33× actual usage** to improve the token-value multiple at an unchanged model mix.
-* Lite and Heavy appear in the plan comparison, but their current prices were not exposed in the fetched pricing page; no price or quota is inferred here.
-* Image/video/voice usage can reduce the pool available for text/code. [Calculation assumptions](../methodology.md).
+* Included monthly token capacities are unavailable in the cited sources.
+* Price ratio: **$100 / $30 = 3.33×**. At a fixed API cost/block, equal API-equivalent/subscription ratios require the same **3.33×** block-count ratio.
+* Lite and Heavy are listed; prices and token quotas were unavailable in the fetched pricing page.
+* Image, video, voice, and text/code draw from the shared weekly pool. [Calculation assumptions](../methodology.md).

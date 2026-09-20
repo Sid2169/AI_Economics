@@ -7,7 +7,7 @@ Source check: **2026-09-20**.
 * US price: **$19.99/month**; includes **5 TB storage** and advertises **4× Free Gemini usage**. [Subscriptions](https://gemini.google/subscriptions/).
 * Gemini uses compute-based five-hour limits and a weekly cap; old daily prompt counts are not the current calculation basis. [Usage change](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/).
 
-## Representative usage
+## Assumed workload
 
 Gemini 3.1 Pro Preview API comparator, requests ≤200K input tokens. [API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-pro-preview).
 
@@ -19,18 +19,18 @@ Gemini 3.1 Pro Preview API comparator, requests ≤200K input tokens. [API prici
 | 0.10M cached tokens × 1 hour × $4.50/M/hour | $0.45 |
 | **Total per block** | **$4.45** |
 
-## Monthly estimate — conditional
+## Monthly calculation
 
-Assume **26–30 blocks/month**, using the sample's workload frequency without claiming a Google token quota:
+Calculation input: **26–30 blocks/month**, from the sample assumption:
 
-**26–30 × $4.45 = $115.70–$133.50**; central **$124.60/month**.
+**26–30 × $4.45 = $115.70–$133.50**; at 28 blocks **$124.60/month**.
 
 * API-equivalent multiple: **5.79–6.68×** subscription price.
-* Central INR illustration: **₹11,214**, against converted subscription **₹1,799**.
+* INR calculation at 28 blocks: **₹11,214**, against converted subscription **₹1,799**.
 * Break-even: **$19.99 / $4.45 = 4.49 blocks/month**.
 
-## Key findings
+## Additional calculations and limits
 
-Storage duration materially affects API replacement cost. Without cache hits, the same token volume costs **$9.40/block**; included throughput may then be lower. [Assumptions](../methodology.md).
+Storage cost: **$4.50 × million-token-hours**. Without cache hits, the same token volume costs **$9.40/block**. [Assumptions](../methodology.md).
 
-Cloud storage, media, and other bundled benefits are unpriced. This values Gemini text/code only; it does not add together Gemini, Antigravity, and other product allowances.
+Scope: Gemini text/code. Bundled benefits and other product allowances are excluded.

@@ -8,7 +8,7 @@ Source check: **2026-09-20**.
 * Five-hour sessions and weekly limits apply. Claude Code is included; API billing is separate. [Pro limits](https://support.claude.com/en/articles/8325606-what-is-the-pro-plan).
 * Claude and Claude Code share subscription usage. [Shared limits](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan).
 
-## Representative usage
+## Assumed workload
 
 Sonnet 5 comparator; [API rates](https://platform.claude.com/docs/en/about-claude/pricing):
 
@@ -20,19 +20,19 @@ Sonnet 5 comparator; [API rates](https://platform.claude.com/docs/en/about-claud
 | 0.15M output/reasoning × $10/M | $1.50 |
 | **3.95M total** | **$3.75** |
 
-## Monthly estimate — conditional
+## Monthly calculation
 
-Transfer the sample's **26–30 blocks/month** as a scenario, not a measured Claude allowance:
+Calculation input: **26–30 blocks/month**, from the sample assumption:
 
-**26–30 × $3.75 = $97.50–$112.50/month**; central **$105**.
+**26–30 × $3.75 = $97.50–$112.50/month**; at 28 blocks **$105**.
 
 * Monthly subscription multiple: **4.88–5.63×**.
 * Annual subscription multiple: **5.85–6.75×**, requiring $200 upfront.
-* Central INR illustration: **₹9,450** versus converted monthly price **₹1,800**.
+* INR calculation at 28 blocks: **₹9,450** versus converted monthly price **₹1,800**.
 * Break-even: **$20 / $3.75 = 5.33 blocks/month**.
 
-## Key findings
+## Additional calculations and limits
 
-The same token volume priced with Opus 5 is **$9.375/block**, or **$243.75–$281.25/month**. This is model sensitivity; Opus can exhaust limits sooner. See [methodology](../methodology.md).
+The same token volume priced with Opus 5 is **$9.375/block**, or **$243.75–$281.25/month**. Monthly token throughput by model is unmeasured. See [methodology](../methodology.md).
 
 Fable 5/5.1 requires extra usage credits on Pro; it is excluded from included-usage estimates. [Fable access](https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan).

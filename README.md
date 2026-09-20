@@ -2,7 +2,7 @@
 
 Source check: **2026-09-20**. API list-price equivalents of subscription usage, following the original [OpenAI Plus sample](OpenAI/plusPlan.md).
 
-[Overall analysis](finalAnalysis.md): findings across labs, upgrade economics, cost drivers, and implications for provider profitability.
+[Summary](finalAnalysis.md): subscription prices, usage conditions, API-equivalent calculations, and cost sensitivity.
 
 | Lab | Analysis | US monthly web price, before tax |
 | --- | --- | ---: |
@@ -24,6 +24,6 @@ Prices and sources are recorded in each analysis. OpenAI Pro 20× currently has 
 
 **Token workload → API cost → assumed monthly usage → subscription multiple.** See [methodology and sensitivity](methodology.md).
 
-The original sample is preserved. Its **6–7 allowances/week**, **$6–$8/allowance**, and **₹90/$** are working assumptions, not published quotas or a current exchange-rate quote. New documents retain the workload and monthly conversion, explicitly price cache creation/storage, and label extrapolations.
+Sample inputs: **6–7 allowances/week**, **$6–$8/allowance**, and **₹90/$**. These are assumptions. The shared methodology specifies cache creation/storage charges and monthly scaling inputs.
 
-**Monthly figures are conditional scenarios, not measured plan maxima.** No usage logs were supplied. Higher API-equivalent value does not establish better model quality, provider losses, or cheaper inference. Scope: text/code usage; bundled media, storage, and administration are unpriced.
+**Monthly block counts and tier scaling are assumed calculation inputs.** No usage logs were supplied. Scope: text/code usage. Bundled media, storage, administration, provider costs, and financial margins are excluded.

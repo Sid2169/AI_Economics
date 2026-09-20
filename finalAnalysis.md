@@ -1,75 +1,74 @@
-# AI Economics — Overall Analysis
+# AI Economics — Summary of Data and Calculations
 
-As of **2026-09-20**. Synthesis of this repository's subscription analyses; USD, before tax.
+As of **2026-09-20**. USD, before tax. Prices and API rates are sourced in the linked plan documents and [methodology](methodology.md).
 
-**Under the assumed workload, heavily used subscriptions can replace several times their price in retail API usage. The economic advantage depends on actual permitted usage, model choice, and caching. These comparisons do not establish lab profitability.**
+## Calculation inputs
 
-## 1. Comparable workload
+* One block: **3.95M tokens** — 3M cache reads, 0.7M ordinary input, 0.1M cache creation, 0.15M output/reasoning.
+* Monthly input: **26–30 blocks**, with **28** as the reference calculation. These quantities originate from the sample assumption; no subscriber usage measurements are available.
+* API-equivalent expenditure: **V = blocks × API cost/block**.
+* Subscription ratio: **V / monthly subscription price**.
+* API/subscription price equality: **monthly subscription price / API cost/block**.
 
-One block: **3.95M tokens**, including 3M cache reads, 0.8M fresh input, and 0.15M output/reasoning. Cache creation/storage included. Assume **28 blocks/month**; this is a demand scenario, not a measured allowance. [Methodology and API sources](methodology.md).
+## Base subscriptions
 
-| Subscription / API comparator | Monthly price | API cost/block | API equivalent at 28 blocks | Value / price | Break-even blocks/month |
+| Subscription / API comparator | Monthly price | API cost/block | API equivalent at 26–30 blocks | Ratio at 28 blocks | Price equality, blocks/month |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| [ChatGPT Plus / GPT-5.6 Sol](OpenAI/plusPlan.md) | $20 | $7.50 | **$210** | **10.50×** | 2.67 |
-| [Claude Pro / Sonnet 5](Anthropic/proPlan.md) | $20 | $3.75 | **$105** | **5.25×** | 5.33 |
-| [Google AI Pro / Gemini 3.1 Pro Preview](Google/proPlan.md) | $19.99 | $4.45 | **$124.60** | **6.23×** | 4.49 |
-| [SuperGrok / Grok 4.6](xAI/superGrokPlan.md) | $30 | $4.00 | **$112** | **3.73×** | 7.50 |
+| [ChatGPT Plus / GPT-5.6 Sol](OpenAI/plusPlan.md) | $20 | $7.50 | **$195–$225** | **10.50×** | 2.67 |
+| [Claude Pro / Sonnet 5](Anthropic/proPlan.md) | $20 | $3.75 | **$97.50–$112.50** | **5.25×** | 5.33 |
+| [Google AI Pro / Gemini 3.1 Pro Preview](Google/proPlan.md) | $19.99 | $4.45 | **$115.70–$133.50** | **6.23×** | 4.49 |
+| [SuperGrok / Grok 4.6](xAI/superGrokPlan.md) | $30 | $4.00 | **$104–$120** | **3.73×** | 7.50 |
 
-Plus is recalculated using the shared methodology and [$20 US price](https://learn.chatgpt.com/docs/pricing); the original sample retains its broader range and Indian price assumption.
+Plus uses the shared cache-write calculation and [$20 US price](https://learn.chatgpt.com/docs/pricing). The original sample uses a $6–$8 block-cost range and ~₹2,000 subscription price.
 
-**This is not a ranking of model quality or available capacity.** OpenAI's larger multiple partly reflects its higher API comparator price. Equal token counts do not imply equal tasks completed.
+## Higher-tier calculations
 
-## 2. Higher tiers: capacity must be used
+The monthly block counts below are **assumed inputs**, not published token allowances. The 5× and 20× calculations multiply the 26–30-block baseline by 5 and 20 respectively.
 
-Central scenarios assume **140 blocks/month on 5× tiers** and **560 on 20× tiers**:
+| Plan / comparator | Monthly price | Assumed blocks/month | API equivalent/month | Ratio at 140 or 560 blocks |
+| --- | ---: | ---: | ---: | ---: |
+| [OpenAI Pro 5× / Sol](OpenAI/proPlan.md) | $100 | 130–150 | **$975–$1,125** | **10.50×** |
+| [OpenAI Pro 20× / Sol](OpenAI/proPlan.md) | $200 | 520–600 | **$3,900–$4,500** | **21.00×** |
+| [Claude Max 5× / Sonnet](Anthropic/maxPlan.md) | $100 | 130–150 | **$487.50–$562.50** | **5.25×** |
+| [Claude Max 20× / Sonnet](Anthropic/maxPlan.md) | $200 | 520–600 | **$1,950–$2,250** | **10.50×** |
+| [Google Ultra 5× / Gemini](Google/ultraPlan.md) | $99.99 | 130–150 | **$578.50–$667.50** | **6.23×** |
+| [Google Ultra 20× / Gemini](Google/ultraPlan.md) | $199.99 | 520–600 | **$2,314–$2,670** | **12.46×** |
 
-| Lab / comparator | 5× tier: price → API equivalent | 20× tier: price → API equivalent |
-| --- | ---: | ---: |
-| [OpenAI / Sol](OpenAI/proPlan.md) | $100 → **$1,050 (10.50×)** | $200 → **$4,200 (21.00×)** |
-| [Anthropic / Sonnet](Anthropic/maxPlan.md) | $100 → **$525 (5.25×)** | $200 → **$2,100 (10.50×)** |
-| [Google / Gemini](Google/ultraPlan.md) | $99.99 → **$623 (6.23×)** | $199.99 → **$2,492 (12.46×)** |
+At **28 blocks/month on each 20× tier**, the respective API equivalents are **$210, $105, $124.60**; ratios are **1.05×, 0.525×, 0.623×**.
 
-Monthly scaling is unverified; Claude explicitly describes per-session multiples. New OpenAI Pro 20× subscriptions/upgrades are paused, subject to limited return eligibility. [Current Pro status](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans).
+## Other plans and billing
 
-At unchanged **28-block usage**, the ~$200 tiers replace only **$105–$210** of API usage. The apparent volume discount disappears when capacity goes unused.
+| Plan | Published price | Calculation or data status |
+| --- | ---: | --- |
+| [ChatGPT Go](OpenAI/goPlan.md) | $8/month | Token allowance unavailable in cited sources; Sol-comparator price equality at 1.07 blocks/month |
+| [Google AI Plus](Google/plusPlan.md) | $4.99/month | Assumed 13–15 blocks: $57.85–$66.75 API equivalent |
+| [SuperGrok Plus](xAI/superGrokPlan.md) | $100/month | Assumed 26–30 blocks: $104–$120 API equivalent |
+| [ChatGPT Business, standard](OpenAI/businessPlan.md) | $25/seat/month; 2-seat minimum | Two seats: $50/month; one active seat at 28 blocks: $210 / $50 = 4.20× |
+| [Claude Team, standard / premium](Anthropic/teamPlan.md) | $25 / $125 per seat/month | Standard annual billing: 2 × $20 × 12 = $480 for two seats |
+| [Claude Enterprise](Anthropic/teamPlan.md) | $20/seat/month, billed annually, plus API-rate usage | 28 Sonnet blocks: $20 + $105 = $125/seat/month equivalent |
 
-For an upgrade, compare **extra useful API-equivalent usage with the price increase**. A $100 → $200 upgrade needs more than **$100 of additional replacement value**, before valuing features or avoided interruptions. A nominal 4× capacity increase does not provide that automatically.
+## Published usage conditions
 
-Other findings:
+* **OpenAI:** five-hour Codex message estimates; weekly limits may apply. New Pro 20× subscriptions/upgrades have been paused since September 10, with limited return eligibility. [Usage](https://learn.chatgpt.com/docs/pricing), [Pro status](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans).
+* **Anthropic:** Max 5×/20× refers to per-session usage; five-hour sessions and separate weekly limits apply. [Max limits](https://support.claude.com/en/articles/11049741-what-is-the-max-plan).
+* **Google:** compute-based five-hour limits and a weekly cap. [Usage change](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/).
+* **xAI:** paid products share a weekly usage pool. [Usage FAQ](https://docs.x.ai/grok/faq).
 
-* [Google AI Plus](Google/plusPlan.md): **$62.30 / $4.99 = 12.48×** at an assumed 14 blocks/month. [ChatGPT Go](OpenAI/goPlan.md): no defensible monthly allowance estimate.
-* [Business](OpenAI/businessPlan.md) and [Team](Anthropic/teamPlan.md): minimum seats and unused seats reduce value; annual discounts require an upfront commitment.
-* [SuperGrok Plus](xAI/superGrokPlan.md): **$112 / $100 = 1.12×** at unchanged usage; its capacity multiplier remains unknown.
+## Cost sensitivity
 
-## 3. What drives the economics
+Fixed token volume; cached costs include the assumed cache creation/storage charges.
 
-**Usage allocation.** Five-hour windows, weekly caps, and shared pools limit how much serving cost a fixed subscription can incur. Google's compute-based limits and Grok's shared pool make task intensity relevant to consumption. Economic inference: the effective price is **subscription cost / useful work completed**; a quota reduction can raise that price without changing the monthly fee. [Google limits](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/), [Grok limits](https://docs.x.ai/grok/faq).
+| Comparator | Cached block | Uncached block | Calculated cost reduction |
+| --- | ---: | ---: | ---: |
+| GPT-5.6 Sol | $7.50 | $18.20 | 58.79% |
+| Sonnet 5 | $3.75 | $9.10 | 58.79% |
+| Gemini 3.1 Pro Preview | $4.45 | $9.40 | 52.66% |
+| Grok 4.6 | $4.00 | $8.50 | 52.94% |
 
-**Caching and reasoning.** For the four primary comparators above, the assumed caching cuts API cost by **53–59%** versus the same token volume without caching. Output/reasoning is only **3.8% of tokens**, but **40% of the Sol and Sonnet block cost**. Long reasoning traces, retries, and repeated agent steps can therefore dominate spending. [Calculations](methodology.md).
+**Reduction = 1 − cached cost / uncached cost.** Output/reasoning accounts for **0.15 / 3.95 = 3.80%** of tokens and **40%** of the cached Sol and Sonnet block costs. [Rates and calculations](methodology.md).
 
-**Segmentation and bundles.** The reviewed plans offer low-price entry, ~$20 general use, ~$100–$200 heavier use, and organizational access. Google also bundles storage and other services; Claude Enterprise charges a seat fee plus API-rate usage. Economic inference: providers can charge for convenience, integration, and administration as well as model consumption. [Google bundles](https://gemini.google/subscriptions/), [Claude pricing](https://claude.com/pricing).
+## Data coverage
 
-## 4. Provider profitability: what can be inferred
+Included: subscription prices, published usage conditions, API list rates, and calculations under stated workload assumptions.
 
-Let **P = net subscription revenue**, **V = retail API-equivalent usage**, and **a = actual serving cost / V**.
-
-**Contribution before other expenses = P − aV.**
-
-Illustration: **P = $20, V = $200**.
-
-| Hypothetical a | Serving cost | Contribution |
-| --- | ---: | ---: |
-| 5% | $10 | +$10 |
-| 10% | $20 | $0 |
-| 20% | $40 | −$20 |
-
-These are sensitivities, not estimates of any lab's cost. A **10× API-value multiple** requires serving cost below **10% of API retail value** merely to leave a positive contribution for that user. Training, research, product development, sales, and other expenses still require funding.
-
-Across subscribers, the relevant quantity is **Σ revenue − Σ actual serving cost**. Light users could offset heavy users; the usage distribution and costs needed to quantify that are absent. Neither a loss-making heavy user nor a profitable subscription cohort establishes company-wide profitability or returns on infrastructure investment.
-
-## 5. Broader implications
-
-* **Lower unit prices can coexist with higher total spending.** Illustratively, halving price while tripling consumption increases spending **1.5×**. More agent activity could offset efficiency gains; this is a scenario, not a demand forecast.
-* **API-value multiples can fall without subscriptions getting worse.** Halving API prices halves the replacement-value multiple at unchanged subscription price and usage. Conversely, a high API list price can inflate the apparent subscription bargain.
-* **The useful comparison is cost per successful task.** Include retries, human review, integration effort, and quota interruptions. A cheaper token can become an expensive result if more work is needed to finish the task.
-* **Financial sustainability remains unresolved.** This repository supports workload and pricing comparisons. It lacks measured subscriber utilization, actual serving costs, revenue mix, training expenditure, and infrastructure commitments needed to estimate lab margins or investment returns.
+Unavailable in this repository: measured monthly token allowances, subscriber usage distributions, provider serving costs, training expenditure, infrastructure commitments, and consolidated financial data. Provider margins and investment returns are not calculated.

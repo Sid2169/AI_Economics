@@ -2,7 +2,7 @@
 
 Source check: **2026-09-20**. USD unless stated otherwise.
 
-## Workload
+## Assumed workload
 
 One **block** uses the sample's 3.95M tokens across multiple requests:
 
@@ -27,14 +27,14 @@ The sample's 0.80M fresh input is split to account for cache creation. Assume re
 | [Gemini 3.1 Pro Preview](https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-pro-preview) | 2 | 0.20 | 2 | 12 | 0.45 | **4.45** |
 | [Grok 4.6](https://docs.x.ai/developers/models/grok-4.6) | 2 | 0.50 | 2 | 6 | 0 | **4.00** |
 
-Sol pricing is promotional through at least November 21, 2026. Comparator selection is explicit; a plan can use other models. Equal token counts across different tokenizers do not imply equal work or quality.
+Sol pricing is promotional through at least November 21, 2026. Calculations use the listed API comparators; task completion and model quality are unmeasured.
 
-## Monthly estimate
+## Monthly calculation
 
-* Sample assumption: **6–7 × 4.33 ≈ 26–30 blocks/month**, central **28**. This is not a verified weekly allowance for any lab.
-* API equivalent: **V = N × C**; price multiple: **V / P**; break-even usage: **P / C blocks/month**.
-* For a tier multiplier **k**, the scaling scenario uses **N = 26k–30k**, central **28k**. It assumes both sufficient demand and sufficient weekly allowance. A session multiplier alone does not establish this.
-* A block measures token volume, not elapsed time. Scaling block count does not create more five-hour windows.
+* Sample assumption: **6–7 × 4.33 ≈ 26–30 blocks/month**. **28** is a reference input, not a measured average. The range is not a statistical confidence interval.
+* API equivalent: **V = N × C**; price multiple: **V / P**; API/subscription price equality (break-even): **P / C blocks/month**. **P** is subscription price; **N** is monthly blocks.
+* For an assumed monthly multiplier **k**, **N = 26k–30k**, reference **28k**. These monthly multipliers are calculation inputs, not measured quotas.
+* Block counts measure aggregate token volume across requests; they do not specify elapsed time.
 * INR illustration: **USD × 90**, retained from the sample; not verified Indian checkout prices. Comparisons use US prices consistently, before tax.
 
 ## Sensitivity
@@ -50,6 +50,6 @@ With no cache hits, the same workload is **3.8M ordinary input + 0.15M output**:
 | Gemini 3.1 Pro Preview | $4.45 | $9.40 |
 | Grok 4.6 | $4.00 | $8.50 |
 
-These hold token volume fixed; less caching or a different model can also exhaust subscription limits sooner. Do not combine higher unit cost with unchanged maximum throughput without evidence. Google storage varies as **$4.50 × million-token-hours**; the assumed $0.45 is not universal.
+Sensitivity calculations hold token volume fixed. Included throughput under different caching/model settings is unmeasured. Google storage cost is **$4.50 × million-token-hours**; this workload assumes **0.10 million-token-hours = $0.45**.
 
-Tool fees, media, fast-mode premiums, taxes, API discounts, and extra usage purchases are excluded. API equivalents measure retail replacement cost, not provider compute cost or profit. Replace assumed block counts with measured usage when available.
+Excluded: tool fees, media, fast-mode premiums, taxes, API discounts, and extra usage purchases. Provider compute costs, profits, and measured subscriber usage are unavailable in this dataset.
