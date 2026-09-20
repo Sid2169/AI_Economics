@@ -2,6 +2,8 @@
 
 Source check: **2026-09-20**. API list-price equivalents of subscription usage, following the original [OpenAI Plus sample](OpenAI/plusPlan.md).
 
+[Overall analysis](finalAnalysis.md): findings across labs, upgrade economics, cost drivers, and implications for provider profitability.
+
 | Lab | Analysis | US monthly web price, before tax |
 | --- | --- | ---: |
 | OpenAI | [Plus — original sample](OpenAI/plusPlan.md) | $20; sample uses ~₹2,000 local price |
