@@ -4,6 +4,17 @@ Source check: **2026-09-20**. API list-price equivalents of subscription usage, 
 
 [Summary](finalAnalysis.md): subscription prices, usage conditions, API-equivalent calculations, and cost sensitivity.
 
+## Additional analyses
+
+| Document | Coverage |
+| --- | --- |
+| [Cost to revenue ratio](cost-revenue.md) | 2025 reported financial figures, expense estimates and cost/revenue calculations |
+| [True cost of AI](true-cost.md) | Inference costs, model-development costs and lifetime-token amortization |
+
+Factual review of these two documents: **2026-09-21**. Financial sources and estimation limits are recorded in the documents.
+
+## Subscription analyses
+
 | Lab | Analysis | US monthly web price, before tax |
 | --- | --- | ---: |
 | OpenAI | [Plus — original sample](OpenAI/plusPlan.md) | $20; sample uses ~₹2,000 local price |
@@ -26,4 +37,4 @@ Prices and sources are recorded in each analysis. OpenAI Pro 20× currently has 
 
 Sample inputs: **6–7 allowances/week**, **$6–$8/allowance**, and **₹90/$**. These are assumptions. The shared methodology specifies cache creation/storage charges and monthly scaling inputs.
 
-**Monthly block counts and tier scaling are assumed calculation inputs.** No usage logs were supplied. Scope: text/code usage. Bundled media, storage, administration, provider costs, and financial margins are excluded.
+**Monthly block counts and tier scaling are assumed calculation inputs.** No usage logs were supplied. Subscription-analysis scope: text/code usage. Those calculations exclude bundled media, storage, administration, provider costs, and financial margins; the additional analyses address provider expenses and cost methodology.
